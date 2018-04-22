@@ -1,0 +1,98 @@
+#include <stdio.h>
+
+#include<stdlib.h>
+
+int main()
+
+{
+    
+	//Creates a file variable with pointer ftpr//
+    
+	FILE *ftpr;
+    
+	//Creates a char array to store the name of the file. I'm honestly not sure why the c is there
+    
+	//But that's what c programers seem to do online ant it only compiles if there's a letter so that's
+    
+	//what I did. Intitializes integer "number" for user-specified number of lines.
+    
+	char file[1000], c;
+    
+	int number;
+    
+	//Obviously, this prints 'Please enter file name'
+    
+	printf("Please enter file name: ");
+    
+	//This takes the user input and stores in in file
+    
+	scanf("%s", file);
+    
+	//Prints 'Please enter number of lines'
+    
+	printf("Please enter number of lines: ")
+    
+	//Takes user input, puts into number
+    
+	scanf("%s", number);
+    
+	//This opens the file whose name is recorded in 'file'. Again, truthfully I have no idea
+    
+	//why the letter is there but it does not work without the letter and online people use it.
+   
+    
+	ftpr=fopen(file, "t");
+    
+	//This checks to see if pointer ftpr is pointing to a NULL value. If the file designated by the user
+    
+	//Does not exit (or more specifically, a file with the name 'file' does not exist) then the program
+    
+	//will pressent a message.
+    
+	if(ftpr==NULL)
+    
+	{
+        
+		printf("File does not exist");
+    
+	}
+    
+	//What this function is supposed to do is retrieve a line from 'file' using fgets and store it in the
+    
+	//psued-string stringOne. Starting with the last line (indicated by EOF) i decrements untill it reaches
+    
+	//'number', at which point the loop stops. Closes out file 
+    
+	else
+    
+	{
+        
+	char stringOne[50];
+        
+	int i;
+        
+	i=EOF;
+        
+	while(i != number)
+        
+	{
+            
+           
+	stringOne=char fgets(int i, FILE file) 
+            
+	printf(stringOne);
+         
+	n=n-1;
+        
+	}
+        
+	//Closes file
+        
+	fclose(file);
+    
+	}
+  
+    
+    
+	return 0;
+	}
